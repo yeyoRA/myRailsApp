@@ -1,0 +1,12 @@
+<p>
+    <strong> Step <%= step.number %> :
+    </strong>
+
+    <%= step.details %>
+</p>
+
+
+<p>
+    <%= link_to 'Delete Step', [step.recipe, step], 
+    method: :delete, data: {confirm: 'Are you sure?'} %>
+</p>

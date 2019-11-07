@@ -1,0 +1,32 @@
+<h1>Lua & Yeyo's Recipes Album</h1>
+ 
+
+<%= link_to 'New Recipe', new_recipe_path %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <% @recipes.each do |rec| %>
+        <tr>
+            <td><%= rec.title %></td>
+            <td><%= rec.author %></td>
+            <td><%= rec.descr %></td>
+            <td><%= link_to 'Show Details', recipe_path(rec) %></td>
+            <td><%= link_to 'Edit', edit_recipe_path(rec) %></td>
+            <td>
+                <%= link_to 'Destroy', recipe_path(rec), 
+                    method: "delete", 
+                    data: {confirm: 'Are you sure?'} %>
+            </td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

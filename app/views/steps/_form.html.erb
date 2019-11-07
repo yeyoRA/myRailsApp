@@ -1,0 +1,14 @@
+<%= form_with(model: [ @recipe, @recipe.steps.build ],
+    local: true) do |form| %>
+  <p>
+    <%= form.label :number %><br>
+    <%= form.number_field(:number, in: 1..100) %>
+  </p>
+  <p>
+    <%= form.label :details %><br>
+    <%= form.text_area :details %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

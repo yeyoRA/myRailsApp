@@ -1,0 +1,25 @@
+<p>
+  <strong>Title:</strong>
+  <%= @recipe.title %>
+</p>
+ 
+<p>
+  <strong>Author:</strong>
+  <%= @recipe.author %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @recipe.descr %>
+</p>
+
+
+<h2> How to prepare: </h2>
+    <%= render @recipe.steps %>
+
+    
+<h2>Add a new step for preparing this recipe:</h2>
+    <%= render 'steps/form' %>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %>
+<%= link_to 'Back', recipes_path %>
