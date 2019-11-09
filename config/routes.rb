@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
+
+
+  post 'users/login' => 'users#login'
+  get 'users/new' => 'users#new'
+  post 'users/create' => 'users#create'
+
+
+  get 'users/userCreated/:id' => 'users#userCreated'
+  get 'users/userNotCreated' => 'users#userNotCreated'
+
   resources :recipes do 
     resources :steps
   end

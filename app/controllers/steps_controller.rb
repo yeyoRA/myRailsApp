@@ -1,7 +1,5 @@
 class StepsController < ApplicationController
 
-    http_basic_authenticate_with name: "dhh", password: "secret" 
-    
     def create
         @recipe = Recipe.find(params[:recipe_id])
         @step = @recipe.steps.create(step_params)

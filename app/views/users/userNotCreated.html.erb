@@ -1,0 +1,15 @@
+<h1> User could not be created. Why?: </h1>
+
+<% if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+<%= link_to "Back to new users", users_new_path %>

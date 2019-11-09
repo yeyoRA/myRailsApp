@@ -1,2 +1,31 @@
-<h1>Hello, welcome to  Lua & Yeyo recipes!</h1>
-<%= link_to 'Our Recipes Album', controller: 'recipes'%>
+<h1>*** Hello, welcome to  Lua & Yeyo recipes ***</h1>
+
+<h2>Log in to access to all our knowledge...</h2>
+
+
+<%= form_with scope: :user, url: users_login_path , local: true do |form| %>
+  <p>
+    <%= form.label :userName %><br>
+    <%= form.text_field :userName %>
+  </p>
+ 
+  <p>
+    <%= form.label :password %><br>
+    <%= form.text_field :password %>
+  </p>
+ 
+  <p>
+    <%= form.submit "Log in" %>
+  </p>
+<% end %>
+
+<h3>
+    <%= link_to "New here? Register", users_new_path %>
+</h3>
+
+
+
+
+
+
+
