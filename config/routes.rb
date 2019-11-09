@@ -3,13 +3,19 @@ Rails.application.routes.draw do
 
 
 
+
   post 'users/login' => 'users#login'
+  get 'users/logout' => 'users#logout'
   get 'users/new' => 'users#new'
   post 'users/create' => 'users#create'
 
 
   get 'users/userCreated/:id' => 'users#userCreated'
   get 'users/userNotCreated' => 'users#userNotCreated'
+
+
+  get 'recipes/index' => 'recipes#index'
+
 
   resources :recipes do 
     resources :steps

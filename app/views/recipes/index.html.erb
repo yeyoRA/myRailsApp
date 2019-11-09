@@ -1,11 +1,8 @@
 <h1>Lua & Yeyo's Recipes Album</h1>
 
-<h2>Hello , 
-
-<%= @user.firstName %>
-
-</h2> 
-
+<h1>
+    <%= flash[:welcome_message] %>
+</h1>
 
 
 <%= link_to 'New Recipe', new_recipe_path %>
@@ -37,3 +34,5 @@
     <% end %>
     </tbody>
 </table>
+
+<h1> <%= link_to "Logout" , users_logout_path %> </h1>

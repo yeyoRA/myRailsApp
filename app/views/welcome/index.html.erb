@@ -11,13 +11,22 @@
  
   <p>
     <%= form.label :password %><br>
-    <%= form.text_field :password %>
+    <%= form.password_field :password %>
   </p>
  
   <p>
     <%= form.submit "Log in" %>
   </p>
 <% end %>
+
+
+  <% if flash[:logged_out] %>
+    <h4>
+      <%= flash[:logged_out] %>
+    </h4>  
+  <% end %>
+
+
 
 <h3>
     <%= link_to "New here? Register", users_new_path %>
